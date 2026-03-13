@@ -1,0 +1,26 @@
+{
+  "machine_ID": "DM-4",
+  "name": "Land Rover 400",
+  "location": {
+    "latitude": 37.78,
+    "longitude": -107.9092,
+    "region": "San Juan Basin",
+    "country": "USA"
+  },
+  "status": "Active",
+  "specifications": {
+    "type": "Onshore",
+    "depth_capacity_meters": 10459.5,
+    "drilling_speed_meters_per_day": 434,
+    "crew_size": 25,
+    "power_source": "Electric"
+  },
+  "last_maintenance_date": "2024-07-19",
+  "next_maintenance_due": "2025-01-19",
+  "contact_information": {
+    "operator_company": "Pacific Drilling Inc.",
+    "contact_person": "Smith John",
+    "phone": "+1-555-123-4567",
+    "email": "john.smith@oceanicdrilling.com"
+  }
+}
