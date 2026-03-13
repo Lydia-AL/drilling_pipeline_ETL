@@ -16,5 +16,5 @@ for filename in files:
     processed = process_machine(data)
     with open(out_path, "w") as f:
         json.dump(processed, f, indent=2)
-
+    print(f"Processed {in_path} -> {out_path}")
 
