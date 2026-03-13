@@ -13,3 +13,14 @@ for filename in files:
     with open(in_path, "r") as f:
         data = json.load(f)
     processed = process_machine(data)
+
+for filename in files:
+    in_path = os.path.join(raw_dir, filename)
+    out_path = os.path.join(processed_dir, filename)
+    with open(in_path, "r") as f:
+        data = json.load(f)
+    processed = process_machine(data)
+    with open(out_path, "w") as f:
+        json.dump(processed, f, indent=2)
+
+
