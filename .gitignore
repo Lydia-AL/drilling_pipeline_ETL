@@ -1,0 +1,15 @@
+# Virtual environment
+venv/
+
+# PyCharm
+.idea/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Environnement local
+.env
