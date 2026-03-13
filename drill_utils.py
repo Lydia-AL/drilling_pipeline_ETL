@@ -70,3 +70,25 @@ def format_machine_id(dm: Dict[str, Any]) -> Dict[str, Any]:
             if raw_key == "machine_ID":
                 del dm["machine_ID"]
     return dm
+
+def format_machine_id(dm: Dict[str, Any]) -> Dict[str, Any]:
+    """Normalize machine_id and reorder keys."""
+    raw_key = "machine_id" if "machine_id" in dm else "machine_ID" if "machine_ID" in dm else None
+    if not raw_key:
+        return dm
+    raw = dm[raw_key]
+    if "-" in raw:
+        prefix, num = raw.split("-", 1)
+        if num.isdigit():
+            dm["machine_id"] = f"{prefix}-{num.zfill(3)}"
+            if raw_key == "machine_ID":
+                del dm["machine_ID"]
+            reordered = {"machine_id": dm["machine_id"]}
+            for k, v in dm.items():
+                if k != "machine_id":
+                    reordered[k] = v
+            return reordered
+    dm["machine_id"] = raw
+    if raw_key == "machine_ID":
+        del dm["machine_ID"]
+    return dm
