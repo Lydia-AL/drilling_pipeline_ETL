@@ -1,4 +1,3 @@
-# drill_utils.py
 from typing import Dict, Any, List
 
 EXPECTED_KEYS: List[str] = [
@@ -45,4 +44,29 @@ def convert_dates(dm: Dict[str, Any]) -> Dict[str, Any]:
         dm["last_maintenance_date"] = to_dd_mm_yyyy(dm["last_maintenance_date"])
     if "next_maintenance_due" in dm:
         dm["next_maintenance_due"] = to_dd_mm_yyyy(dm["next_maintenance_due"])
+    return dm
+
+def add_contact_info(dm: Dict[str, Any]) -> Dict[str, Any]:
+    """Ensure contact_information key exists."""
+    if "contact_information" not in dm or not isinstance(dm["contact_information"], dict):
+        dm["contact_information"] = {
+            "operator_company": None,
+            "contact_person": None,
+            "phone": None,
+            "email": None,
+        }
+    return dm
+
+def format_machine_id(dm: Dict[str, Any]) -> Dict[str, Any]:
+    """Normalize machine id to format 'DM-XXX'."""
+    raw_key = "machine_id" if "machine_id" in dm else "machine_ID" if "machine_ID" in dm else None
+    if not raw_key:
+        return dm
+    raw = dm[raw_key]
+    if "-" in raw:
+        prefix, num = raw.split("-", 1)
+        if num.isdigit():
+            dm["machine_id"] = f"{prefix}-{num.zfill(3)}"
+            if raw_key == "machine_ID":
+                del dm["machine_ID"]
     return dm
