@@ -48,7 +48,6 @@ drilling_pipeline_ETL/
 - Virtualenv recommandé
 
 Installer les dépendances :
-```bash
 pip install -r requirements.txt
 
 ---
@@ -65,9 +64,8 @@ Les fichiers traités seront générés automatiquement dans data/processed.
 
 Chaque étape du pipeline est appliquée automatiquement grâce aux fonctions définies dans drill_utils.py.
 
----
+## Exemple de sortie
 
-## Exemple de sortie 
 {
   "machine_id": "DM-001",
   "name": "Land Rover 200",
@@ -100,6 +98,7 @@ Chaque étape du pipeline est appliquée automatiquement grâce aux fonctions d�
 Contributions bienvenues pour :
 
 Ajouter de nouvelles transformations ETL
-Améliorer la documentation
-Intégrer tests automatisés
 
+Améliorer la documentation
+
+Intégrer tests automatisés
