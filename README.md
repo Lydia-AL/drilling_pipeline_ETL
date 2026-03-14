@@ -95,6 +95,7 @@ Chaque étape du pipeline est appliquée automatiquement grâce aux fonctions d�
     "email": null
   }
 }
+```
 
 ## Contribution
 
