@@ -29,16 +29,18 @@ Exemple d’application : réaliser un reporting sur toutes les foreuses située
 
 ## Structure du projet
 
+```
 drilling_pipeline_ETL/
 │
-├─ data/
-│ ├─ raw/ # fichiers JSON bruts
-│ └─ processed/ # fichiers JSON transformés (créés par le pipeline)
+├── data/
+│   ├── raw/          # fichiers JSON bruts
+│   └── processed/    # fichiers JSON transformés (créés par le pipeline)
 │
-├─ drill_utils.py # fonctions utilitaires pour traitement des données
-├─ main.py # script principal qui applique le pipeline sur tous les fichiers
-├─ requirements.txt # dépendances Python
-└─ README.md
+├── drills_utils.py   # fonctions utilitaires pour traitement des données
+├── main.py           # script principal qui applique le pipeline sur tous les fichiers
+├── requirements.txt  # dépendances Python
+└── README.md
+```
 
 
 ---
