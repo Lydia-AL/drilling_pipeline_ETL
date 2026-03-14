@@ -68,6 +68,7 @@ Chaque étape du pipeline est appliquée automatiquement grâce aux fonctions d�
 
 ## Exemple de sortie
 
+```json
 {
   "machine_id": "DM-001",
   "name": "Land Rover 200",
