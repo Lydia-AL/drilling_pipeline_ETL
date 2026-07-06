@@ -1,6 +1,6 @@
 import os
 import json
-from drill_utils import process_machine, remove_useless_data, convert_dates, convert_miles_to_meters, add_contact_info, format_machine_id
+from drills_utils import process_machine, remove_useless_data, convert_dates, convert_miles_to_meters, add_contact_info, format_machine_id
 
 raw_dir = "data/raw"
 processed_dir = "data/processed"
